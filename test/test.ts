@@ -1,8 +1,11 @@
-var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1,2,3].indexOf(4));
-    });
-  });
-});
+import {newGame} from "../index";
+import * as res from '../resource';
+
+var assert = require('chai').assert
+
+describe('newGame', () => {
+  it(`should be player one's turn`, () => {
+    const gameState = newGame()
+      assert.equal(gameState.currentPlayer, res.PlayerId.One)
+  })
+})
