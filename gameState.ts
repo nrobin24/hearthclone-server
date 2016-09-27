@@ -20,8 +20,8 @@ export function initialGameState() {
   const firstPlayer = res.PlayerId.One
   const startingResources = []
   const playerStates = [
-    initialPlayerState(res.PlayerId.One),
-    initialPlayerState(res.PlayerId.Two)
+    initialPlayerState(res.PlayerId.One, true),
+    initialPlayerState(res.PlayerId.Two, false)
   ]
 
   return new GameState(firstPlayer, startingResources, playerStates)
